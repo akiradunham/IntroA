@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Guess the Number Game </title>
+</head>
+<body>
+<p id="user"></p>
+<p id="comp"></p>
+<p id="result"></p>
+
+
+<script>
+	var userAnswer = prompt("Pick a number between 1 and 5");
+	document.getElementById("user").innerHTML = userAnswer
+	var computerChoice= function() {
+		var compAnswer = Math.floor(Math.random()*5+1);
+		document.getElementById("comp").innerHTML = compAnswer;
+		if (userAnswer==compAnswer) {
+			document.getElementById("result").innerHTML = ("You Win!!!")
+		} else {
+	document.getElementById("result").innerHTML = ("Incorect")
+}
+}
+computerChoice();
+</script>
+</body>
+</html>
+
+
